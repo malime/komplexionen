@@ -1,0 +1,43 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: "jacoco"
+apply plugin: 'maven'
+
+jacoco {
+	toolVersion = "0.7.+"
+	reportsDir = file("$buildDir/customJacocoReportDir")
+}
+
+jacocoTestReport {
+	group = "Reporting"
+	description = "Generate Jacoco coverage reports after running tests."
+	additionalSourceDirs = files(sourceSets.main.allJava.srcDirs)
+}
+
+sourceCompatibility = 1.8
+version = '1.0.0'
+jar {
+	manifest {
+		attributes 'Implementation-Title': 'de.malime.math.komplexionen',
+				   'Implementation-Version': version
+	}
+}
+
+configure(install.repositories.mavenInstaller) {
+	pom.project {
+		groupId 'de.malime.math'
+		artifactId 'komplexion'
+		packaging 'jar'
+	}
+}
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+}
+
+dependencies {
+	testCompile "junit:junit:4.+"
+	compile 'org.apache.logging.log4j:log4j-api:2.+'
+	compile 'org.apache.logging.log4j:log4j-core:2.+'
+}
