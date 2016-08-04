@@ -9,7 +9,7 @@ forms, with or without     ,_            JN`                              "L4
 modification, are          ´NL.         JNF    __.                         ´LL.   
 permitted provided that      "JN______JNF`      N()              _           ´.L.  
 the following conditions       """"""""`´NL.   ()N`           _JN"            4/L  
-are met:                                  ´`N_NNF           _N"               4J) 
+are met:                                  ""N_NNF           _N"               4J) 
                                             ,NN` ,_.      ,NN                 ´LN 
  * Redistributions of source code         JN"    ""NN)___NN`                  N(.
     must retain the above copyright       NF             N4)    "4L_           NJ 
