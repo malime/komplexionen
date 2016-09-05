@@ -2,6 +2,7 @@
 /.gradle/
 /bin/
 /log4j2.log
+/log4j2-*.log
 /log4j2-*.log.gz
 /gradle-app.setting
 /.settings/
