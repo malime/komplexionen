@@ -85,7 +85,7 @@ public abstract class _Komplexionen {
      *
      * @return true, if is valid
      */
-    public boolean isValid(int index) {
+    public boolean isValid(final int index) {
         return ((index >= 0) && (index < komplexionen()));
     }
 
@@ -105,7 +105,7 @@ public abstract class _Komplexionen {
      * @param width Die Anzahl der Zeichen, die eine Zahl mindestens hat
      * @return Die Komplexion ( Zahlenfolge ) als Leerzeichen getrennter String 
      */
-    public String toString(int[] komplexion, int width ) {
+    public String toString(final int[] komplexion, final int width ) {
     	return toString( komplexion, width, "", " ", "" );
     }
     
@@ -117,7 +117,7 @@ public abstract class _Komplexionen {
      * @param postfix
      * @return Die Komplexion als String, der durch vorgegebener Pre-, In- und Postfix getrennten Zahlen
      */
-    public String toString(int[] komplexion, int width,String prefix, String infix,String postfix) {
+    public String toString(final int[] komplexion, final int width,final String prefix, final String infix,final String postfix) {
         if ((komplexion != null) && (komplexion.length > 0)) {
             StringBuffer _komplexion = new StringBuffer(String.format(prefix+"%" + width + "d", komplexion[0]));
             for (int ii = 1; ii < komplexion.length; ii++) {
