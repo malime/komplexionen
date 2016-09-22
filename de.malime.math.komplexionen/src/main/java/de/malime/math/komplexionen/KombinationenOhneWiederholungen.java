@@ -35,18 +35,12 @@ POSSIBILITY OF SUCH DAMAGE.
 ************************************************************************** rame **/
 package de.malime.math.komplexionen;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 /**
  * Die Klasse KombinationenOhneWiederholungen
  * Aus einer Menge von n Elementen existieren sich bei k Ziehungen
  * ( n \over k ) Kombinationen ohne Wiederholungen
  */
 public class KombinationenOhneWiederholungen extends _Komplexionen {
-    /** The logger. */
-    private static final Logger LOGGER = LogManager.getLogger(KombinationenOhneWiederholungen.class);
-
     /** The Constant PRECALCSIZEY. */
     private static final int PRECALCSIZEY = 7;
 
@@ -72,17 +66,6 @@ public class KombinationenOhneWiederholungen extends _Komplexionen {
             for (ii = 1; ii < PRECALCSIZEX; ii++) {
                 for (jj = 1; jj < PRECALCSIZEY; jj++) {
                     mElements[ii][jj] = mElements[ii - 1][jj] + mElements[ii][jj - 1];
-                }
-            }
-            if (LOGGER.isTraceEnabled()) {
-                for (ii = 0; ii < PRECALCSIZEX; ii++) {
-                    StringBuffer line = new StringBuffer();
-                    final StringBuffer value = new StringBuffer();
-                    for (jj = 0; jj < PRECALCSIZEY; jj++) {
-                        value.append("             " + mElements[ii][jj]);
-                        line.append(value.substring(value.length() - 11));
-                    }
-                    LOGGER.trace(line);
                 }
             }
         }
@@ -119,9 +102,6 @@ public class KombinationenOhneWiederholungen extends _Komplexionen {
      */
     private static int anzahl(final int summe, final int freiheiten) {
         int anzahl = ((summe == 0) || (freiheiten == 0)) ? 1 : ( ( summe == 1 ) ? (freiheiten + 1 ) : ( (freiheiten == 1) ? (summe + 1) : (((summe < PRECALCSIZEX) && (freiheiten < PRECALCSIZEY)) ? mElements[summe - 2][freiheiten - 2] : (anzahl(summe - 1, freiheiten) + anzahl(summe, freiheiten - 1)))));
-        if (LOGGER.isTraceEnabled()) {
-            LOGGER.trace("Getting the index for the values sum = '" + summe + "' freedom '" + freiheiten + "' is '" + anzahl + "'");
-        }
         return anzahl;
     }
 
@@ -195,38 +175,19 @@ public class KombinationenOhneWiederholungen extends _Komplexionen {
      * @see de.malime.math.komplexionen._Komplexionen#isValid(int[])
      */
     public boolean isValid(final int[] komplexion) {
-        if (LOGGER.isTraceEnabled()) {
-            LOGGER.trace("Validating whether the given array '" + toString(komplexion, 1 + (getElemente() / 10)) + "' of integer forms a kombination without repeation of length '" + getUmfang() + "'");
-        }
         if (komplexion.length != getUmfang()) {
-            if (LOGGER.isTraceEnabled()) {
-                LOGGER.trace("The given array '" + toString(komplexion, 1 + (getElemente() / 10)) + "' of integer is not a kombination without repeation of length '" + getUmfang() + "'");
-            }
             return false;
         }
         if (komplexion[0] < 0) {
-            if (LOGGER.isTraceEnabled()) {
-                LOGGER.trace("The given array '" + toString(komplexion, 1 + (getElemente() / 10)) + "' of integer is not a kombination without repeation of length '" + getUmfang() + "'");
-            }
             return false;
         }
         if (komplexion[getUmfang() - 1] > getElemente()) {
-            if (LOGGER.isTraceEnabled()) {
-                LOGGER.trace("The given array '" + toString(komplexion, 1 + (getElemente() / 10)) + "' of integer is not a kombination without repeation of length '" + getUmfang() + "'");
-            }
             return false;
         }
         for (int ii = 0; ii < (mUmfang - 1); ii++) {
             if (komplexion[ii] >= komplexion[ii + 1]) {
-                if (LOGGER.isTraceEnabled()) {
-                    LOGGER.trace("The given array '" + toString(komplexion, 1 + (getElemente() / 10)) + "' of integer is not a kombination without repeation of length '" + getUmfang() 
-                    		   + "', because the integer '" + komplexion[ii] + "' at position '" + ii + "' is not less than the integer '" + komplexion[ii + 1] + "' at position '" + (ii + 1) + "'");
-                }
                 return false;
             }
-        }
-        if (LOGGER.isTraceEnabled()) {
-            LOGGER.trace("The given array '" + toString(komplexion, 1 + (getElemente() / 10)) + "' of integer forms a kombination without repeation of length '" + getUmfang() + "'");
         }
         return true;
     }

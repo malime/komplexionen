@@ -35,9 +35,6 @@ POSSIBILITY OF SUCH DAMAGE.
 ************************************************************************** rame **/
 package de.malime.math.komplexionen;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 /**
  * Die KombinationenMitWiederholungen lassen sich auf KombinationenOhneWiederholung bijektiv abbilden
  * So ist KmW(5,3) identisch zu KoW(3+5-1=7,3) ...
@@ -51,8 +48,6 @@ import org.apache.logging.log4j.Logger;
  * ( n + k - 1 \over k ) Kombinationen mit Wiederholungen
  */
 public class KombinationenMitWiederholungen extends KombinationenOhneWiederholungen {
-    /** The logger. */
-    private static Logger logger = LogManager.getLogger(KombinationenMitWiederholungen.class);
     /**
      * Instantiates a new KombinationenMitWiederholungen.
      * 
@@ -100,41 +95,19 @@ public class KombinationenMitWiederholungen extends KombinationenOhneWiederholun
 	 * @see de.malime.math.komplexionen.KombinationenOhneWiederholungen#isValid(int[])
 	 */
 	public boolean isValid(int[] komplexion) {
-        if (logger.isTraceEnabled()) { // $COVERAGE-IGNORE$
-            logger.trace("Validating whether the given array '" + toString(komplexion, 1 + (getElemente() / 10)) + "' of integer forms a kombination with repeation of length '" + getUmfang() + "'");
-        }
         if (komplexion.length != getUmfang()) {
-            if (logger.isTraceEnabled()) { // $COVERAGE-IGNORE$
-                logger.trace("The given array '" + toString(komplexion, 1 + (getElemente() / 10)) + "' of integer is not a kombination with repeation of length '" + getUmfang() + "'");
-            }
             return false;
         }
         if (komplexion[0] < 0) {
-            if (logger.isTraceEnabled()) { // $COVERAGE-IGNORE$
-                logger.trace("The given array '" + toString(komplexion, 1 + (getElemente() / 10)) + "' of integer is not a kombination with repeation of length '" + getUmfang() + "'");
-            }
             return false;
         }
         if (komplexion[getUmfang() - 1] > getElemente() ) {
-            if (logger.isTraceEnabled()) { // $COVERAGE-IGNORE$
-                logger.trace("The given array '" + toString(komplexion, 1 + (getElemente() / 10)) + "' of integer is not a kombination with repeation of length '" + getUmfang() + "'");
-            }
             return false;
         }
         for (int ii = 0; ii < ( getUmfang() - 1); ii++) {
             if (komplexion[ ii ] > komplexion[ ii + 1 ] ) {
-                if (logger.isTraceEnabled()) { // $COVERAGE-IGNORE$
-                    logger.trace("The given array '" + toString(komplexion, 1 + (getElemente() / 10)) + "' of integer is not a kombination with repeation of length '" + getUmfang() 
-                    		   + "', because the integer '" + komplexion[ii] + "' at position '" + ii + "' is not less than the integer '" + komplexion[ii + 1] + "' at position '" + (ii + 1) + "'");
-                }
                 return false;
             }
-        }
-        if (logger.isTraceEnabled()) { // $COVERAGE-IGNORE$
-            logger.trace("The given array '" +
-                toString(komplexion, 1 + (getElemente() / 10)) +
-                "' of integer forms a kombination with repeation of length '" +
-                getUmfang() + "'");
         }
         return true;
 	}

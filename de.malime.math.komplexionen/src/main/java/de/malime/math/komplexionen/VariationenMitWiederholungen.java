@@ -35,18 +35,12 @@ POSSIBILITY OF SUCH DAMAGE.
 ************************************************************************** rame **/
 package de.malime.math.komplexionen;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 /**
  * Die Klasse VariationenMitWiederholungen.
  * Aus einer Menge von n Elementen existieren bei k Ziehungen
  * n^k Variationen mit Wiederholungen
  */
 public class VariationenMitWiederholungen extends _Komplexionen {
-    /** The logger. */
-    private static Logger logger = LogManager.getLogger(VariationenMitWiederholungen.class);
-    
     /** The m elemente. */
     private int mElemente;
 
@@ -123,26 +117,13 @@ public class VariationenMitWiederholungen extends _Komplexionen {
      */
     @Override
     public boolean isValid(int[] komplexion) {
-        if (logger.isTraceEnabled()) {
-            logger.trace("Validating whether the given array '" + toString(komplexion, 1 + (getElemente() / 10)) + "' of integer forms a variation with repeation of length '" + getUmfang() + "'");
-        }
         if (komplexion.length != getUmfang()) {
-            if (logger.isTraceEnabled()) {
-                logger.trace("The given array '" + toString(komplexion, 1 + (getElemente() / 10)) + "' of integer is not a variation with repeation of length '" + getUmfang() + "'");
-            }
             return false;
         }
         for (int ii = 0; ii < getUmfang(); ii++) {
             if ( komplexion[ ii ] < 0 || getElemente() < komplexion[ ii ] ) {
-                if (logger.isTraceEnabled()) {
-                    logger.trace("The given array '" + toString(komplexion, 1 + (getElemente() / 10)) + "' of integer is not a variation with repeation of length '" + getUmfang() 
-                    		   + "', because the integer '" + komplexion[ii] + "' at position '" + ii + "' is not in the range from '0' to '" + ( getElemente() - 1 ) + "' at position '" + (ii + 1) + "'");
-                }
                 return false;
             }
-        }
-        if (logger.isTraceEnabled()) {
-            logger.trace("The given array '" + toString(komplexion, 1 + (getElemente() / 10)) + "' of integer forms a variation with repeation of length '" + getUmfang() + "'");
         }
         return true;
     }
