@@ -1,29 +1,20 @@
 /**********************************************************************************
-Copyright (c) 2014, malime           _JNNN                                         
-                                  _NNF""        ____NNNNNNNN4___                   
-All rights reserved.           _JNF`       ,__NN""""        """4NN4__              
-                             _NF"          ´"                     "4_F_.           
-Redistribution and use     ,JN"                                      ´LFL.         
-in source and binary       4"                                          ´\/\.       
-forms, with or without     ,_            JN`                              "L4     
-modification, are          ´NL.         JNF    __.                         ´LL.   
-permitted provided that      "JN______JNF`      N()              _           ´.L.  
-the following conditions       """"""""`´NL.   ()N`           _JN"            4/L  
-are met:                                  ´`N_NNF           _N"               4J) 
-                                            ,NN` ,_.      ,NN                 ´LN 
- * Redistributions of source code         JN"    ""NN)___NN`                  N(.
-    must retain the above copyright       NF             N4)    "4L_           NJ 
-    notice, this list of conditions                      F()       4F)         NN 
-    and the following disclaimer.                        ""         4N.        NJ.
- * Redistribution in binary form must reproduce                     \N       ,NN 
-    the above copyright notice, this list of               ,_J`      (N)     (FN` 
-    conditions and the following disclaimer in           _NN"        (N)     NJ)  
-    the documentation and/or other materials            (NF          (N     (N)   
-    provided with the distribution.                     NN          ,N`    JNF    
-                                                        "NL.            ,JNN`      
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS        "NF_.     __JNN"`        
-AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED          """"""""""            
-WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+Copyright (c) 2009, malime.de
+                         __  __    __    __    ____  __  __  ____    ____  ____ 
+All rights reserved.    (  \/  )  /__\  (  )  (_  _)(  \/  )( ___)  (  _ \( ___)
+                         )    (  /(__)\  )(__  _)(_  )    (  )__)    )(_) ))__)    
+Redistribution and use  (_/\/\_)(__)(__)(____)(____)(_/\/\_)(____)()(____/(____)  
+in source and binary                                                              
+forms, with or without modification, are permitted provided that the following 
+conditions are met: 
+  * Redistributions of source code must retain the above copyright notice, this 
+    list of conditions and the following disclaimer. 
+  * Redistribution in binary form must reproduce the above copyright notice, this
+    list of conditions and the following disclaimer in the documentation and/or 
+    other materials provided with the distribution. 
+                                                    
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
 WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
 IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, 
 INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
