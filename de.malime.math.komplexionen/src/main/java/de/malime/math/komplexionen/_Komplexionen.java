@@ -36,7 +36,7 @@ POSSIBILITY OF SUCH DAMAGE.
 package de.malime.math.komplexionen;
 
 /**
- * Das Interface _Komplexionen dient der Definition von mathematischen Komplexionen.
+ * The Interface _Komplexionen defines mathematical complexions
  */
 public abstract class _Komplexionen {
     /**
