@@ -1,5 +1,5 @@
 /**********************************************************************************
-Copyright (c) 2013, malime           _JNNN                                         
+Copyright (c) 2016, malime           _JNNN                                         
                                   _NNF""        ____NNNNNNNN4___                   
 All rights reserved.           _JNF`       ,__NN""""        """4NN4__              
                              _NF"          ´"                     "4_F_.           
@@ -11,11 +11,11 @@ permitted provided that      "JN______JNF`      N()              _           ´.
 the following conditions       """"""""`´NL.   ()N`           _JN"            4/L  
 are met:                                  ´`N_NNF           _N"               4J) 
                                             ,NN` ,_.      ,NN                 ´LN 
-  * Redistributions of source code         JN"    ""NN)___NN`                  N(.
+ * Redistributions of source code         JN"    ""NN)___NN`                  N(.
     must retain the above copyright       NF             N4)    "4L_           NJ 
     notice, this list of conditions                      F()       4F)         NN 
     and the following disclaimer.                        ""         4N.        NJ.
-  * Redistribution in binary form must reproduce                     \N       ,NN 
+ * Redistribution in binary form must reproduce                     \N       ,NN 
     the above copyright notice, this list of               ,_J`      (N)     (FN` 
     conditions and the following disclaimer in           _NN"        (N)     NJ)  
     the documentation and/or other materials            (NF          (N     (N)   

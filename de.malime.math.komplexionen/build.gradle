@@ -3,6 +3,8 @@ apply plugin: 'eclipse'
 apply plugin: "jacoco"
 apply plugin: 'maven'
 
+compileJava.options.encoding = 'UTF-8'    
+
 jacoco {
 	toolVersion = "0.7.+"
 	reportsDir = file("$buildDir/customJacocoReportDir")
